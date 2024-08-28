@@ -1,0 +1,57 @@
+const faunadb = require('faunadb');
+const q = faunadb.query;
+
+const client = new faunadb.Client({
+  secret: process.env.FAUNA_SECRET_KEY
+});
+
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  const { name, email, date, time, duration } = JSON.parse(event.body);
+
+  if (!name || !email || !date || !time || !duration) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'All fields are required' })
+    };
+  }
+
+  try {
+    // Check availability
+    const availabilityResult = await client.query(
+      q.Count(
+        q.Match(q.Index('bookings_by_date_time_duration'), [date, time, duration])
+      )
+    );
+
+    if (availabilityResult >= 3) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'No ATVs available for this time slot' })
+      };
+    }
+
+    // Create booking
+    const result = await client.query(
+      q.Create(
+        q.Collection('bookings'),
+        {
+          data: { name, email, date, time, duration }
+        }
+      )
+    );
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true, id: result.ref.id })
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to create booking' })
+    };
+  }
+};
