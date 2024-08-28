@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Kids Quad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Media/LQK2.jpg" alt="Logo Le Kids Quad">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+      <video autoplay muted loop class="hero-video">
+        <source src="Media/quad2.mp4" type="video/mp4">
+        <!-- Provide an alternative for browsers that don't support video -->
+        Your browser does not support the video tag.
+      </video>
+        <div class="hero-content">
+            <h1>Vivez l'Aventure</h1>
+            <p>Venez vivre une expérience unique avec Le Kids Quad</p>
+            <a href="#book" class="btn-cta">Réservez Maintenant</a>
+        </div>
+    </section>
+
+  <section id="book" class="booking">
+    <div class="container">
+        <h2>Réservez un créneau de pilotage pour votre enfant</h2>
+        <form id="booking-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Votre Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Sélectionnez la Date :</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Sélectionnez la Durée :</label>
+                    <select id="duration" name="duration" required>
+                        <option value="15">15 Minutes</option>
+                        <option value="30">30 Minutes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Sélectionnez l'Heure :</label>
+                    <select id="time" name="time" required>
+                        <!-- Times will be dynamically populated based on duration -->
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn-cta">Réservez Maintenant</button>
+        </form>
+    </div>
+  </section>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À Propos</h2>
+            <p>Le Kids Quad offre une expérience inoubliable pour les enfants, où la sécurité rencontre l'aventure...</p>
+            <div class="about-values">
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Nos Valeurs</h3>
+                    <p>Nous veillons à ce que les enfants s'amusent et découvrent le plaisir de piloter un quad...</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Nos Objectifs</h3>
+                    <p>Nous visons à offrir une expérience sûre, agréable et mémorable pour tous les jeunes pilotes...</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>La Sécurité Avant Tout</h3>
+                    <p>La sécurité de votre enfant est notre priorité absolue. Nous fournissons des équipements de protection et des instructions de sécurité...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tour en Quad de 15 Minutes</h3>
+                    <p class="price">20€</p>
+                    <p>Comprend casque et gants pour la protection...</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-stopwatch"></i>
+                    <h3>Tour en Quad de 30 Minutes</h3>
+                    <p class="price">30€</p>
+                    <p>Comprend casque et gants pour la protection...</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Souvenir Photo & Vidéo</h3>
+                    <p class="price">5€ - 15€</p>
+                    <p>Immortalisez le moment avec une GoPro...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Ce Que Disent Nos Clients</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <img src="Media/client1.jpg" alt="Client 1" class="client-photo">
+                    <p>"Mes enfants ont adoré l'expérience ! Le personnel était sympathique et les quads étaient sûrs et amusants. Je recommande vivement !"</p>
+                    <span>- John Doe, Parent</span>
+                </div>
+                <div class="testimonial">
+                    <img src="Media/client2.jpg" alt="Client 2" class="client-photo">
+                    <p>"Une activité estivale parfaite pour les enfants ! Les mesures de sécurité étaient au top, et les enfants se sont éclatés !"</p>
+                    <span>- Jane Smith, Parent</span>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galerie Photos</h2>
+            <div class="gallery-grid">
+                <!-- Add your gallery images here -->
+                <img src="Media/enfantsquad.jpg" alt="Kids enjoying quad rides">
+                <img src="Media/track.jpg" alt="Quad tracks">
+                <img src="Media/casquegants.jpg" alt="Safety equipment">
+                <img src="Media/family.jpg" alt="Happy families">
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Quel âge faut-il avoir pour faire du quad ?</h3>
+                    <p>Les enfants à partir de 6 ans peuvent participer à nos activités de quad.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>L'équipement de sécurité est-il fourni ?</h3>
+                    <p>Oui, nous fournissons tous les équipements de sécurité nécessaires, y compris les casques et les gants.</p>
+                </div>
+                <!-- Add more FAQ items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <div class="contact-grid">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Votre Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta">Envoyer le Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Quad, Le Touquet, France</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> info@lekidsquad.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Le Kids Quad</h3>
+                    <p>&copy; 2024 | Tous droits réservés.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-Nous</h3>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
