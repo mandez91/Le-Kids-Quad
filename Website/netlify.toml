@@ -1,3 +1,3 @@
 [build]
-  publish = "dist"
-  functions = "functions"
+  publish = "website/dist"
+  functions = "website/functions"
